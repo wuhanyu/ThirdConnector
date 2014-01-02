@@ -24,10 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetRelatedObjectsResponse_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getRelatedObjectsResponse");
     private final static QName _GetBugIdByReq_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getBugIdByReq");
     private final static QName _GetReqIdByBugResponse_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getReqIdByBugResponse");
     private final static QName _GetBugIdByReqResponse_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getBugIdByReqResponse");
     private final static QName _CreateBugReqRel_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "createBugReqRel");
+    private final static QName _GetRelatedObjects_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getRelatedObjects");
     private final static QName _CreateBugReqRelResponse_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "createBugReqRelResponse");
     private final static QName _GetReqIdByBug_QNAME = new QName("http://service.nfs.iscas.ac.cn/", "getReqIdByBug");
 
@@ -55,6 +57,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetRelatedObjectsResponse }
+     * 
+     */
+    public GetRelatedObjectsResponse createGetRelatedObjectsResponse() {
+        return new GetRelatedObjectsResponse();
+    }
+
+    /**
      * Create an instance of {@link CreateBugReqRelResponse }
      * 
      */
@@ -79,11 +89,36 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetRelatedObjects }
+     * 
+     */
+    public GetRelatedObjects createGetRelatedObjects() {
+        return new GetRelatedObjects();
+    }
+
+    /**
      * Create an instance of {@link CreateBugReqRel }
      * 
      */
     public CreateBugReqRel createCreateBugReqRel() {
         return new CreateBugReqRel();
+    }
+
+    /**
+     * Create an instance of {@link JsonObject }
+     * 
+     */
+    public JsonObject createJsonObject() {
+        return new JsonObject();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRelatedObjectsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.nfs.iscas.ac.cn/", name = "getRelatedObjectsResponse")
+    public JAXBElement<GetRelatedObjectsResponse> createGetRelatedObjectsResponse(GetRelatedObjectsResponse value) {
+        return new JAXBElement<GetRelatedObjectsResponse>(_GetRelatedObjectsResponse_QNAME, GetRelatedObjectsResponse.class, null, value);
     }
 
     /**
@@ -120,6 +155,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.nfs.iscas.ac.cn/", name = "createBugReqRel")
     public JAXBElement<CreateBugReqRel> createCreateBugReqRel(CreateBugReqRel value) {
         return new JAXBElement<CreateBugReqRel>(_CreateBugReqRel_QNAME, CreateBugReqRel.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRelatedObjects }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.nfs.iscas.ac.cn/", name = "getRelatedObjects")
+    public JAXBElement<GetRelatedObjects> createGetRelatedObjects(GetRelatedObjects value) {
+        return new JAXBElement<GetRelatedObjects>(_GetRelatedObjects_QNAME, GetRelatedObjects.class, null, value);
     }
 
     /**
